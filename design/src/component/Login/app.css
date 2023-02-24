@@ -1,0 +1,87 @@
+.main {
+    width: 100vw;
+    height: 100vh;
+    background-color: "#D1E2E6";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.paper {
+    height: 80vh;
+    width: 70%;
+    border-radius: 15px;
+}
+
+.lefts {
+    background-color: #244DA0;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px
+}
+
+.rights {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 55px;
+
+
+
+
+}
+
+.logform {
+    width: 400px;
+    text-align: center
+}
+
+.logform:hover {
+    scale: 1.03;
+    box-shadow: 0.5px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    width: 300px;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.3);
+
+
+
+    backdrop-filter: blur(15px);
+    --border-size: 3px;
+    --border-angle: 0turn;
+    background: conic-gradient(from var(--border-angle),
+            #244DA0,
+            #244DA0 50%,
+            #244DA0 ),
+        conic-gradient(from var(--border-angle), transparent 20%, rgb(208, 255, 0), #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)),
+        cover;
+    background-position: center center ;
+    background-repeat: no-repeat;
+
+    animation: bg-spin 3s linear infinite;
+
+
+
+
+
+}
+
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
